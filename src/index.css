@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  
+  /* Modern Service Business Color Palette */
+  --color-primary: #0f172a; /* Slate 900 - Trust & Professionalism */
+  --color-secondary: #3b82f6; /* Blue 500 - Action & Clarity */
+  --color-accent: #f59e0b; /* Amber 500 - Attention & Urgency */
+  
+  --spacing-container: 1280px;
+}
+
+/* Base styles for smooth scrolling and typography */
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+}
+
+body {
+  @apply bg-gray-50 text-gray-800 antialiased;
+}
