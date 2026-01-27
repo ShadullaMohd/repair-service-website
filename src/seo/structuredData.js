@@ -6,7 +6,7 @@ export const getLocalBusinessSchema = () => ({
   "name": BUSINESS_INFO.name,
   "image": "/logo.png", 
   "telephone": BUSINESS_INFO.phone,
-  "url": typeof window !== 'undefined' ? window.location.origin : 'https://mosinappliancerepair.com',
+  "url": typeof window !== 'undefined' ? window.location.origin : 'https://best-repair-service.vercel.app',
   "email": BUSINESS_INFO.email,
   "address": {
     "@type": "PostalAddress",

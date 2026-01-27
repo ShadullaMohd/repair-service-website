@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.cityfixrepair.com/sitemap.xml
+Sitemap: https://best-repair-service.vercel.app/sitemap.xml
