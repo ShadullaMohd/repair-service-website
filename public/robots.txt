@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://best-repair-service.vercel.app/sitemap.xml
+Sitemap: https://hyderabadwashingmachinerepair.in/sitemap.xml

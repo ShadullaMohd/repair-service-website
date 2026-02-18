@@ -4,9 +4,9 @@ export const getLocalBusinessSchema = () => ({
   "@context": "https://schema.org",
   "@type": "HomeAndConstructionBusiness",
   "name": BUSINESS_INFO.name,
-  "image": "https://best-repair-service.vercel.app/logo.svg",
+  "image": "https://hyderabadwashingmachinerepair.in/logo.svg",
   "telephone": BUSINESS_INFO.phone,
-  "url": typeof window !== 'undefined' ? window.location.origin : 'https://best-repair-service.vercel.app',
+  "url": typeof window !== 'undefined' ? window.location.origin : 'https://hyderabadwashingmachinerepair.in',
   "email": BUSINESS_INFO.email,
   "address": {
     "@type": "PostalAddress",
