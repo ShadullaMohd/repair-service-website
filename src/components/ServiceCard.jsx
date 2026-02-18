@@ -20,6 +20,7 @@ export default function ServiceCard({ title, description, icon: Icon, image, lin
                 <Link
                     to={link}
                     className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors"
+                    aria-label={`Learn more about ${title}`}
                 >
                     Explore More <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>

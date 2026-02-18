@@ -8,9 +8,12 @@ export default function HeroSection() {
             {/* Background Image Overlay */}
             <div className="absolute inset-0 opacity-20">
                 <img
-                    src="https://images.unsplash.com/photo-1581092921461-eab62e97a783?q=80&w=2070&auto=format&fit=crop"
+                    src="https://images.unsplash.com/photo-1581092921461-eab62e97a783?q=80&w=1200&auto=format&fit=crop"
                     alt="Appliance Repair Background"
                     className="w-full h-full object-cover"
+                    loading="eager"
+                    width="1200"
+                    height="800"
                 />
             </div>
 
@@ -37,6 +40,7 @@ export default function HeroSection() {
                         <a
                             href={`tel:${BUSINESS_INFO.phone}`}
                             className="inline-flex justify-center items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all transform hover:scale-105 shadow-lg shadow-blue-600/30"
+                            aria-label={`Call ${BUSINESS_INFO.phoneDisplay}`}
                         >
                             <Phone className="w-5 h-5" />
                             <span>Call {BUSINESS_INFO.phoneDisplay}</span>
@@ -44,6 +48,7 @@ export default function HeroSection() {
                         <Link
                             to="/contact"
                             className="inline-flex justify-center items-center space-x-2 bg-white/10 hover:bg-white/20 text-white border border-white/20 px-8 py-4 rounded-lg font-bold text-lg backdrop-blur-sm transition-all"
+                            aria-label="Book Appointment Online"
                         >
                             <span>Book Appointment</span>
                         </Link>

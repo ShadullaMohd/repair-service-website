@@ -17,8 +17,8 @@ export default function Footer() {
                         </p>
                         <div className="flex space-x-4">
                             {/* Dummy Social Icons */}
-                            <a href="#" className="hover:text-white transition-colors"><Facebook className="w-5 h-5" /></a>
-                            <a href="#" className="hover:text-white transition-colors"><Instagram className="w-5 h-5" /></a>
+                            <a href="#" aria-label="Facebook" className="hover:text-white transition-colors"><Facebook className="w-5 h-5" /></a>
+                            <a href="#" aria-label="Instagram" className="hover:text-white transition-colors"><Instagram className="w-5 h-5" /></a>
                         </div>
                     </div>
 
@@ -76,6 +76,19 @@ export default function Footer() {
                                 <a href={`mailto:${BUSINESS_INFO.email}`} className="hover:text-white">{BUSINESS_INFO.email}</a>
                             </li>
                         </ul>
+                    </div>
+                </div>
+
+                {/* Service Areas - SEO Optimization */}
+                <div className="border-t border-slate-800 pt-8 pb-8 mb-8">
+                    <h4 className="text-lg font-bold text-white mb-4">Areas We Serve in Hyderabad</h4>
+                    <div className="flex flex-wrap gap-2">
+                        {BUSINESS_INFO.serviceAreas.map((area, index) => (
+                            <span key={index} className="text-slate-400 text-sm bg-slate-800 px-3 py-1 rounded-full border border-slate-700 hover:border-slate-500 hover:text-white transition-colors cursor-default">
+                                {area}
+                            </span>
+                        ))}
+                        <span className="text-slate-500 text-sm px-2 py-1">and nearby areas...</span>
                     </div>
                 </div>
 

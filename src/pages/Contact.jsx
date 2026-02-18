@@ -64,7 +64,7 @@ export default function Contact() {
         <div className="bg-slate-50 min-h-screen">
             <MetaTags
                 title="Contact Us | Schedule a Repair"
-                description="Get in touch with Mosin Appliance Repair for fast service. Call us or book an appointment via WhatsApp."
+                description="Get in touch with Hyderabad Washing Machine Repair for fast service. Call us or book an appointment via WhatsApp."
             />
 
             <div className="bg-slate-900 text-white py-16 text-center">
@@ -177,8 +177,8 @@ export default function Contact() {
                                     onClick={getLocation}
                                     disabled={loadingLocation || location}
                                     className={`w-full flex items-center justify-center space-x-2 px-4 py-3 rounded-lg border transition-all ${location
-                                            ? 'bg-green-50 border-green-200 text-green-700'
-                                            : 'bg-slate-50 border-slate-200 text-slate-700 hover:bg-slate-100'
+                                        ? 'bg-green-50 border-green-200 text-green-700'
+                                        : 'bg-slate-50 border-slate-200 text-slate-700 hover:bg-slate-100'
                                         }`}
                                 >
                                     <Map className={`w-5 h-5 ${location ? 'text-green-600' : 'text-slate-500'}`} />

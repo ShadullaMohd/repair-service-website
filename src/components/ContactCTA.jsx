@@ -16,6 +16,7 @@ export default function ContactCTA() {
                     <a
                         href={`tel:${BUSINESS_INFO.phone}`}
                         className="inline-flex justify-center items-center space-x-2 bg-white text-blue-600 hover:bg-slate-100 px-8 py-4 rounded-full font-bold text-lg transition-colors shadow-lg"
+                        aria-label={`Call ${BUSINESS_INFO.phoneDisplay}`}
                     >
                         <Phone className="w-5 h-5" />
                         <span>Call {BUSINESS_INFO.phoneDisplay}</span>
@@ -23,6 +24,7 @@ export default function ContactCTA() {
                     <Link
                         to="/contact"
                         className="inline-flex justify-center items-center space-x-2 bg-blue-700 text-white hover:bg-blue-800 border border-blue-500 px-8 py-4 rounded-full font-bold text-lg transition-colors"
+                        aria-label="Book Online"
                     >
                         <span>Book Online</span>
                     </Link>
