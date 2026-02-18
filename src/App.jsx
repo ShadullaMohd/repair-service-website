@@ -11,6 +11,7 @@ import FridgeRepair from './pages/FridgeRepair';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
+import BrandRepair from './pages/BrandRepair';
 
 // Placeholder components for pages not yet created to avoid build errors
 // We will replace these file imports with actual files in the next steps.

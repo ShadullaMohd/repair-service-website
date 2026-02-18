@@ -32,8 +32,8 @@ export default function HeroSection() {
                     </h1>
 
                     <p className="text-xl text-slate-300 mb-8 max-w-2xl">
-                        Expert repair for washing machines and refrigerators.
-                        We fix it right the first time, backed by our satisfaction guarantee.
+                        Expert repair for <strong>Fully Automatic Washing Machines</strong> (Front Load & Top Load) and Refrigerators.
+                        We provide <span className="text-blue-400 font-bold">Same Day Doorstep Service</span> in Hyderabad.
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4">

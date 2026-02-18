@@ -51,6 +51,26 @@ export default function Footer() {
                                 </Link>
                             </li>
                             <li>
+                                <Link to="/lg-washing-machine-repair" className="hover:text-blue-400 transition-colors">
+                                    LG Washing Machine Repair
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="/samsung-washing-machine-repair" className="hover:text-blue-400 transition-colors">
+                                    Samsung Washing Machine Repair
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="/ifb-washing-machine-repair" className="hover:text-blue-400 transition-colors">
+                                    IFB Washing Machine Repair
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="/whirlpool-washing-machine-repair" className="hover:text-blue-400 transition-colors">
+                                    Whirlpool Washing Machine Repair
+                                </Link>
+                            </li>
+                            <li>
                                 <span className="text-slate-500">Microwave Repair (Coming Soon)</span>
                             </li>
                             <li>
