@@ -10,8 +10,8 @@ export default function Home() {
     return (
         <>
             <MetaTags
-                title="Best Washing Machine & Fridge Repair Service"
-                description="Expert appliance repair service near you. We fix washing machines and refrigerators with same-day service and warranty. Call now for a quote!"
+                title="Washing Machine Repair in Hyderabad | Same Day Service"
+                description="Expert washing machine and refrigerator repair in Hyderabad. Same day doorstep service for all brands (LG, Samsung, Whirlpool, etc)."
                 schema={getLocalBusinessSchema()}
             />
 

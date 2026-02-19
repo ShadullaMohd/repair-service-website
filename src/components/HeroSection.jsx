@@ -25,10 +25,10 @@ export default function HeroSection() {
                     </div>
 
                     <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-                        Fast & Reliable <br />
+                        Washing Machine Repair in Hyderabad – <br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-200">
-                            Appliance Repair
-                        </span> Service
+                            Same Day Service
+                        </span>
                     </h1>
 
                     <p className="text-xl text-slate-300 mb-8 max-w-2xl">

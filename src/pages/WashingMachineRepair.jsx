@@ -24,7 +24,7 @@ export default function WashingMachineRepair() {
     return (
         <div className="bg-slate-50 min-h-screen">
             <MetaTags
-                title="Washing Machine Repair Service Near Me | Expert Technicians"
+                title="Washing Machine Repair in Hyderabad | Same Day Service"
                 description="Fast & reliable washing machine repair service. We fix all brands including Samsung, LG, IFB, Whirlpool. Same-day service available. Call now!"
                 schema={schema}
             />
