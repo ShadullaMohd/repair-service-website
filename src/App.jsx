@@ -28,6 +28,17 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/washing-machine-repair" element={<WashingMachineRepair />} />
           <Route path="/fridge-repair" element={<FridgeRepair />} />
+
+          {/* Brand Specific Pages - Matching Sitemap */}
+          <Route path="/lg-washing-machine-repair" element={<BrandRepair brand="lg" />} />
+          <Route path="/samsung-washing-machine-repair" element={<BrandRepair brand="samsung" />} />
+          <Route path="/whirlpool-washing-machine-repair" element={<BrandRepair brand="whirlpool" />} />
+          <Route path="/ifb-washing-machine-repair" element={<BrandRepair brand="ifb" />} />
+          <Route path="/godrej-washing-machine-repair" element={<BrandRepair brand="godrej" />} />
+          <Route path="/haier-washing-machine-repair" element={<BrandRepair brand="haier" />} />
+          <Route path="/panasonic-washing-machine-repair" element={<BrandRepair brand="panasonic" />} />
+          <Route path="/bosch-washing-machine-repair" element={<BrandRepair brand="bosch" />} />
+
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />

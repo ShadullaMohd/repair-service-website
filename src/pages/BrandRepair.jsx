@@ -15,8 +15,9 @@ const brandData = {
     bosch: { name: "Bosch", title: "Bosch Washing Machine Repair" }
 };
 
-export default function BrandRepair() {
-    const { brand } = useParams();
+export default function BrandRepair({ brand: propBrand }) {
+    const { brand: paramBrand } = useParams();
+    const brand = propBrand || paramBrand;
     const info = brandData[brand] || { name: "Washing Machine", title: "Washing Machine Repair" };
     const capitalizedBrand = info.name;
 
