@@ -12,6 +12,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
 import BrandRepair from './pages/BrandRepair';
+import LocationRepair from './pages/LocationRepair';
 
 // Placeholder components for pages not yet created to avoid build errors
 // We will replace these file imports with actual files in the next steps.
@@ -37,11 +38,6 @@ function App() {
           <Route path="/godrej-washing-machine-repair" element={<BrandRepair brand="godrej" />} />
           <Route path="/haier-washing-machine-repair" element={<BrandRepair brand="haier" />} />
           <Route path="/panasonic-washing-machine-repair" element={<BrandRepair brand="panasonic" />} />
-          import LocationRepair from './pages/LocationRepair';
-
-          // ... (existing helper function if any, or just import at top)
-
-          // inside App() return Routes:
           {/* Location Specific Pages - SEO Strategy */}
           <Route path="/washing-machine-repair-in-madhapur" element={<LocationRepair location="Madhapur" />} />
           <Route path="/washing-machine-repair-in-gachibowli" element={<LocationRepair location="Gachibowli" />} />
