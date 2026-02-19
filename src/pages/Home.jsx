@@ -6,6 +6,8 @@ import ContactCTA from '../components/ContactCTA';
 import MetaTags from '../seo/MetaTags';
 import { getLocalBusinessSchema } from '../seo/structuredData';
 
+import FAQ from '../components/FAQ';
+
 export default function Home() {
     return (
         <>
@@ -19,6 +21,7 @@ export default function Home() {
             <Services />
             <WhyChooseUs />
             <Testimonials />
+            <FAQ />
             <ContactCTA />
         </>
     );

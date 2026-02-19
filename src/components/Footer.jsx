@@ -36,6 +36,25 @@ export default function Footer() {
                         </ul>
                     </div>
 
+                    {/* Column 3: Areas & Legal */}
+                    <div>
+                        <h4 className="text-lg font-bold text-white mb-4">Areas We Serve</h4>
+                        <ul className="space-y-2 text-slate-300">
+                            <li><Link to="/washing-machine-repair-in-madhapur" className="hover:text-blue-400 transition-colors">Madhapur</Link></li>
+                            <li><Link to="/washing-machine-repair-in-gachibowli" className="hover:text-blue-400 transition-colors">Gachibowli</Link></li>
+                            <li><Link to="/washing-machine-repair-in-kukatpally" className="hover:text-blue-400 transition-colors">Kukatpally</Link></li>
+                            <li><Link to="/washing-machine-repair-in-hitech-city" className="hover:text-blue-400 transition-colors">Hitech City</Link></li>
+                            <li><Link to="/washing-machine-repair-in-kondapur" className="hover:text-blue-400 transition-colors">Kondapur</Link></li>
+                            <li><Link to="/washing-machine-repair-in-manikonda" className="hover:text-blue-400 transition-colors">Manikonda</Link></li>
+                            <li><Link to="/washing-machine-repair-in-uppal" className="hover:text-blue-400 transition-colors">Uppal</Link></li>
+                            <li><Link to="/washing-machine-repair-in-habsiguda" className="hover:text-blue-400 transition-colors">Habsiguda</Link></li>
+                            <li><Link to="/washing-machine-repair-in-amberpet" className="hover:text-blue-400 transition-colors">Amberpet</Link></li>
+                            <li><Link to="/washing-machine-repair-in-nagole" className="hover:text-blue-400 transition-colors">Nagole</Link></li>
+                            <li><Link to="/washing-machine-repair-in-dilsukhnagar" className="hover:text-blue-400 transition-colors">Dilsukhnagar</Link></li>
+                            <li><Link to="/washing-machine-repair-in-nacharam" className="hover:text-blue-400 transition-colors">Nacharam</Link></li>
+                        </ul>
+                    </div>
+
                     {/* Services */}
                     <div>
                         <h4 className="text-lg font-bold text-white mb-4">Our Services</h4>

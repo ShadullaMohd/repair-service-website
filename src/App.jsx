@@ -37,7 +37,29 @@ function App() {
           <Route path="/godrej-washing-machine-repair" element={<BrandRepair brand="godrej" />} />
           <Route path="/haier-washing-machine-repair" element={<BrandRepair brand="haier" />} />
           <Route path="/panasonic-washing-machine-repair" element={<BrandRepair brand="panasonic" />} />
-          <Route path="/bosch-washing-machine-repair" element={<BrandRepair brand="bosch" />} />
+          import LocationRepair from './pages/LocationRepair';
+
+          // ... (existing helper function if any, or just import at top)
+
+          // inside App() return Routes:
+          {/* Location Specific Pages - SEO Strategy */}
+          <Route path="/washing-machine-repair-in-madhapur" element={<LocationRepair location="Madhapur" />} />
+          <Route path="/washing-machine-repair-in-gachibowli" element={<LocationRepair location="Gachibowli" />} />
+          <Route path="/washing-machine-repair-in-kukatpally" element={<LocationRepair location="Kukatpally" />} />
+          <Route path="/washing-machine-repair-in-hitech-city" element={<LocationRepair location="Hitech City" />} />
+          <Route path="/washing-machine-repair-in-kondapur" element={<LocationRepair location="Kondapur" />} />
+          <Route path="/washing-machine-repair-in-manikonda" element={<LocationRepair location="Manikonda" />} />
+          <Route path="/washing-machine-repair-in-miyapur" element={<LocationRepair location="Miyapur" />} />
+          <Route path="/washing-machine-repair-in-chandanagar" element={<LocationRepair location="Chandanagar" />} />
+          <Route path="/washing-machine-repair-in-begumpet" element={<LocationRepair location="Begumpet" />} />
+          <Route path="/washing-machine-repair-in-uppal" element={<LocationRepair location="Uppal" />} />
+
+          {/* Near Ramanthapur */}
+          <Route path="/washing-machine-repair-in-habsiguda" element={<LocationRepair location="Habsiguda" />} />
+          <Route path="/washing-machine-repair-in-amberpet" element={<LocationRepair location="Amberpet" />} />
+          <Route path="/washing-machine-repair-in-nagole" element={<LocationRepair location="Nagole" />} />
+          <Route path="/washing-machine-repair-in-dilsukhnagar" element={<LocationRepair location="Dilsukhnagar" />} />
+          <Route path="/washing-machine-repair-in-nacharam" element={<LocationRepair location="Nacharam" />} />
 
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
