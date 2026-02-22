@@ -4,9 +4,9 @@ export const getLocalBusinessSchema = () => ({
   "@context": "https://schema.org",
   "@type": "HomeAndConstructionBusiness",
   "name": BUSINESS_INFO.name,
-  "image": "https://hyderabadwashingmachinerepair.in/logo.svg",
+  "image": "https://www.hyderabadwashingmachinerepair.in/logo.svg",
   "telephone": BUSINESS_INFO.phone,
-  "url": typeof window !== 'undefined' ? window.location.origin : 'https://hyderabadwashingmachinerepair.in',
+  "url": typeof window !== 'undefined' ? window.location.origin : 'https://www.hyderabadwashingmachinerepair.in',
   "email": BUSINESS_INFO.email,
   "address": {
     "@type": "PostalAddress",
