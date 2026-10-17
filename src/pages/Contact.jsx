@@ -12,6 +12,7 @@ export default function Contact() {
     });
     const [location, setLocation] = useState(null);
     const [loadingLocation, setLoadingLocation] = useState(false);
+    const [locationStatus, setLocationStatus] = useState(null);
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.id]: e.target.value });
@@ -19,23 +20,34 @@ export default function Contact() {
 
     const getLocation = () => {
         setLoadingLocation(true);
+        setLocationStatus(null);
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(
                 (position) => {
                     const { latitude, longitude } = position.coords;
                     setLocation(`https://www.google.com/maps?q=${latitude},${longitude}`);
                     setLoadingLocation(false);
-                    alert("Location captured successfully!");
+                    setLocationStatus({
+                        type: 'success',
+                        message: 'GPS location attached successfully! Technician will navigate directly to you.'
+                    });
                 },
                 (error) => {
                     console.error("Error getting location:", error);
                     setLoadingLocation(false);
-                    alert("Unable to retrieve your location. Please ensure location services are enabled.");
-                }
+                    setLocationStatus({
+                        type: 'error',
+                        message: 'Unable to detect GPS. Please enter your colony/area in the notes below.'
+                    });
+                },
+                { enableHighAccuracy: true, timeout: 10000 }
             );
         } else {
             setLoadingLocation(false);
-            alert("Geolocation is not supported by this browser.");
+            setLocationStatus({
+                type: 'error',
+                message: 'Geolocation is not supported by your browser. Please type your locality below.'
+            });
         }
     };
 
@@ -171,22 +183,33 @@ export default function Contact() {
                             </div>
 
                             <div>
-                                <label className="block text-sm font-medium text-slate-700 mb-1">Share Location (Required for faster service)</label>
+                                <label className="block text-sm font-semibold text-slate-700 mb-1">
+                                    Share Location (Optional - Enables 60-Min Dispatch)
+                                </label>
                                 <button
                                     type="button"
                                     onClick={getLocation}
                                     disabled={loadingLocation || location}
-                                    className={`w-full flex items-center justify-center space-x-2 px-4 py-3 rounded-lg border transition-all ${location
-                                        ? 'bg-green-50 border-green-200 text-green-700'
-                                        : 'bg-slate-50 border-slate-200 text-slate-700 hover:bg-slate-100'
+                                    className={`w-full flex items-center justify-center space-x-2 px-4 py-3 rounded-xl border font-medium text-sm transition-all ${location
+                                        ? 'bg-emerald-50 border-emerald-300 text-emerald-800'
+                                        : 'bg-slate-50 border-slate-200 text-slate-700 hover:bg-slate-100 hover:border-slate-300'
                                         }`}
                                 >
-                                    <Map className={`w-5 h-5 ${location ? 'text-green-600' : 'text-slate-500'}`} />
+                                    <Map className={`w-5 h-5 ${location ? 'text-emerald-600' : 'text-slate-500'}`} />
                                     <span>
-                                        {loadingLocation ? 'Getting Location...' : location ? 'Location Attached' : 'Share My Current Location'}
+                                        {loadingLocation ? 'Detecting GPS Coordinates...' : location ? '✓ GPS Location Attached' : 'Auto-Attach My Current Location'}
                                     </span>
                                 </button>
-                                {location && <p className="text-xs text-green-600 mt-1">Location will be sent with your message.</p>}
+                                {locationStatus && (
+                                    <div className={`mt-2 p-2.5 rounded-lg text-xs leading-relaxed flex items-start space-x-2 ${
+                                        locationStatus.type === 'success'
+                                            ? 'bg-emerald-50 text-emerald-800 border border-emerald-200'
+                                            : 'bg-amber-50 text-amber-800 border border-amber-200'
+                                    }`}>
+                                        <span className="font-bold">{locationStatus.type === 'success' ? '✓' : 'ℹ'}</span>
+                                        <span>{locationStatus.message}</span>
+                                    </div>
+                                )}
                             </div>
 
                             <div>

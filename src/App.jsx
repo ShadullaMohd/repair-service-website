@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import FloatingActions from './components/FloatingActions';
 
 // Pages
 import Home from './pages/Home';
@@ -21,7 +22,7 @@ import LocationRepair from './pages/LocationRepair';
 
 function App() {
   return (
-    <div className="flex flex-col min-h-screen font-sans text-slate-900">
+    <div className="flex flex-col min-h-screen font-sans text-slate-900 pb-16 sm:pb-0">
       <ScrollToTop />
       <Navbar />
       <main className="flex-grow">
@@ -38,6 +39,7 @@ function App() {
           <Route path="/godrej-washing-machine-repair" element={<BrandRepair brand="godrej" />} />
           <Route path="/haier-washing-machine-repair" element={<BrandRepair brand="haier" />} />
           <Route path="/panasonic-washing-machine-repair" element={<BrandRepair brand="panasonic" />} />
+          <Route path="/bosch-washing-machine-repair" element={<BrandRepair brand="bosch" />} />
           {/* Location Specific Pages - SEO Strategy */}
           <Route path="/washing-machine-repair-in-madhapur" element={<LocationRepair location="Madhapur" />} />
           <Route path="/washing-machine-repair-in-gachibowli" element={<LocationRepair location="Gachibowli" />} />
@@ -63,6 +65,7 @@ function App() {
         </Routes>
       </main>
       <Footer />
+      <FloatingActions />
     </div>
   );
 }

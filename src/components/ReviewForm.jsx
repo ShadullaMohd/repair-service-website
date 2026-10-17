@@ -1,11 +1,12 @@
 import { useState } from 'react';
-import { Star, X } from 'lucide-react';
+import { Star, X, CheckCircle } from 'lucide-react';
 import { useReviews } from '../context/ReviewContext';
 
 export default function ReviewForm({ onClose }) {
     const { addReview } = useReviews();
     const [rating, setRating] = useState(5);
     const [hoveredRating, setHoveredRating] = useState(0);
+    const [submitted, setSubmitted] = useState(false);
     const [formData, setFormData] = useState({
         name: '',
         content: ''
@@ -18,21 +19,40 @@ export default function ReviewForm({ onClose }) {
             content: formData.content,
             rating
         });
-        alert("Thank you for your feedback! It has been posted.");
-        onClose();
+        setSubmitted(true);
+        setTimeout(() => {
+            onClose();
+        }, 1800);
     };
 
     return (
-        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4 backdrop-blur-sm">
-            <div className="bg-white rounded-2xl shadow-xl max-w-md w-full p-6 relative animate-in fade-in zoom-in duration-200">
+        <div className="fixed inset-0 bg-slate-900/60 z-50 flex items-center justify-center p-4 backdrop-blur-sm animate-in fade-in duration-200">
+            <div className="bg-white rounded-3xl shadow-2xl max-w-md w-full p-8 relative border border-slate-100">
                 <button
                     onClick={onClose}
-                    className="absolute top-4 right-4 text-slate-400 hover:text-slate-600"
+                    className="absolute top-5 right-5 text-slate-400 hover:text-slate-600 p-1 rounded-full hover:bg-slate-100 transition-colors"
+                    aria-label="Close modal"
                 >
-                    <X className="w-6 h-6" />
+                    <X className="w-5 h-5" />
                 </button>
 
-                <h3 className="text-2xl font-bold text-slate-900 mb-6">Rate Your Experience</h3>
+                {submitted ? (
+                    <div className="text-center py-8">
+                        <div className="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4 animate-bounce">
+                            <CheckCircle className="w-9 h-9" />
+                        </div>
+                        <h3 className="text-2xl font-bold text-slate-900 mb-2">Review Submitted!</h3>
+                        <p className="text-slate-600 text-sm">Thank you for sharing your experience. Your feedback helps our Hyderabad community.</p>
+                    </div>
+                ) : (
+                    <>
+                        <div className="mb-6">
+                            <span className="text-blue-600 font-bold text-xs uppercase tracking-wider bg-blue-50 px-2.5 py-1 rounded-md">
+                                Verified Feedback
+                            </span>
+                            <h3 className="text-2xl font-bold text-slate-900 mt-2">Rate Your Experience</h3>
+                            <p className="text-slate-500 text-xs">Help other homeowners in Hyderabad find reliable service</p>
+                        </div>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                     {/* Star Rating */}
@@ -92,6 +112,8 @@ export default function ReviewForm({ onClose }) {
                         Submit Review
                     </button>
                 </form>
+                    </>
+                )}
             </div>
         </div>
     );

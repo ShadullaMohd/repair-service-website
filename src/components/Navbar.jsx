@@ -27,21 +27,28 @@ export default function Navbar() {
             <div className="container mx-auto px-4 max-w-7xl">
                 <div className="flex justify-between items-center py-4">
                     {/* Logo */}
-                    <Link to="/" className="flex items-center space-x-2 text-2xl font-bold text-slate-900" onClick={() => setIsOpen(false)}>
-                        <div className="bg-blue-600 p-1.5 rounded-lg">
-                            <Wrench className="w-6 h-6 text-white" />
+                    <Link to="/" className="flex items-center space-x-3 group" onClick={() => setIsOpen(false)}>
+                        <div className="bg-gradient-to-tr from-blue-700 to-blue-500 p-2 rounded-xl shadow-md shadow-blue-500/20 group-hover:scale-105 transition-transform">
+                            <Wrench className="w-5 h-5 text-white" />
                         </div>
-                        <span>City<span className="text-blue-600">Fix</span></span>
+                        <div className="flex flex-col">
+                            <span className="text-2xl font-black tracking-tight text-slate-900 leading-none">
+                                City<span className="text-blue-600">Fix</span>
+                            </span>
+                            <span className="text-[10px] uppercase font-bold tracking-wider text-slate-400 mt-0.5">
+                                Hyderabad Doorstep Repair
+                            </span>
+                        </div>
                     </Link>
 
                     {/* Desktop Navigation */}
-                    <nav className="hidden md:flex space-x-8 items-center">
+                    <nav className="hidden md:flex space-x-7 items-center">
                         {NAV_LINKS.map((link) => (
                             <NavLink
                                 key={link.path}
                                 to={link.path}
                                 className={({ isActive }) =>
-                                    `text-sm font-medium transition-colors hover:text-blue-600 ${isActive ? 'text-blue-600' : 'text-slate-600'
+                                    `text-sm font-semibold transition-all relative py-1 hover:text-blue-600 ${isActive ? 'text-blue-600 after:content-[""] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-blue-600 after:rounded-full' : 'text-slate-600'
                                     }`
                                 }
                             >
@@ -51,12 +58,12 @@ export default function Navbar() {
                     </nav>
 
                     {/* Desktop CTA */}
-                    <div className="hidden md:flex items-center">
+                    <div className="hidden md:flex items-center space-x-3">
                         <a
                             href={`tel:${BUSINESS_INFO.phone}`}
-                            className="flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-full font-bold transition-transform transform hover:scale-105"
+                            className="flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-5 py-2.5 rounded-full font-bold text-sm shadow-md shadow-blue-600/25 transition-all transform hover:-translate-y-0.5"
                         >
-                            <Phone className="w-4 h-4" />
+                            <Phone className="w-4 h-4 animate-bounce" />
                             <span>{BUSINESS_INFO.phoneDisplay}</span>
                         </a>
                     </div>

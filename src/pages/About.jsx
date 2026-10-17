@@ -47,7 +47,7 @@ export default function About() {
                             <Heart className="w-8 h-8 text-blue-600" />
                         </div>
                         <h3 className="text-xl font-bold text-slate-900 mb-2">Customer First</h3>
-                        <p className="text-slate-600">We prioritize your convenience and offer a 90-day warranty on all repairs.</p>
+                        <p className="text-slate-600">We prioritize your convenience and offer a 90-day warranty on spare parts and a 30-day service guarantee.</p>
                     </div>
                 </div>
             </div>

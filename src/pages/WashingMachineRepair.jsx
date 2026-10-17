@@ -1,6 +1,6 @@
 import MetaTags from '../seo/MetaTags';
 import { getServiceSchema } from '../seo/structuredData';
-import { Phone, CheckCircle, AlertTriangle, Settings, PenTool } from 'lucide-react';
+import { Phone, CheckCircle, AlertTriangle, Settings, PenTool, Clock as ClockIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
 import { BUSINESS_INFO } from '../utils/constants';
 
 // Common problems list
@@ -139,7 +139,3 @@ export default function WashingMachineRepair() {
         </div>
     );
 }
-
-// Simple Icon Wrappers for Sidebar (since I didn't import them all at top to keep it clean)
-// Actually I should import them. Let's fix imports.
-import { Clock as ClockIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';

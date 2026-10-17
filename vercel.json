@@ -1,4 +1,17 @@
 {
+    "redirects": [
+        {
+            "source": "/:path*",
+            "has": [
+                {
+                    "type": "host",
+                    "value": "hyderabadwashingmachinerepair.in"
+                }
+            ],
+            "destination": "https://www.hyderabadwashingmachinerepair.in/:path*",
+            "permanent": true
+        }
+    ],
     "rewrites": [
         {
             "source": "/(.*)",

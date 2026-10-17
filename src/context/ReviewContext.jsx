@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useEffect } from 'react';
+import { createContext, useState, useEffect } from 'react';
 
 const ReviewContext = createContext();
 
@@ -56,6 +56,7 @@ export function ReviewProvider({ children }) {
     );
 }
 
-export function useReviews() {
-    return useContext(ReviewContext);
-}
+export { ReviewContext };
+
+// eslint-disable-next-line react-refresh/only-export-components
+export { useReviews } from './useReviews';

@@ -1,5 +1,7 @@
 export const BUSINESS_INFO = {
-  name: "Hyderabad Washing Machine Repair",
+  name: "CityFix",
+  brandDisplay: "CityFix",
+  fullName: "CityFix - Hyderabad Washing Machine & Refrigerator Repair",
   contactPerson: "Mosin",
   phone: "+91 8367780984",
   phoneDisplay: "+91 83677 80984",
@@ -7,10 +9,13 @@ export const BUSINESS_INFO = {
   email: "shadullamohammad007@gmail.com", 
   address: "Ramanthapur, Hyderabad, Telangana 500013",
   workingHours: "Mon - Sun: 8:00 AM - 10:00 PM",
+  warrantyShort: "90-Day Warranty Assured",
+  warrantyFull: "90-Day Warranty on Spares & 30-Day Service Warranty",
   serviceAreas: [
     "Hyderabad", "Uppal", "Amberpet", "Begumpet", "Kothapet", "Habsiguda", 
     "HITEC City", "Kukatpally", "L. B. Nagar", "Ramanthapur", "Dilsukhnagar", 
-    "Banjara Hills", "Jubilee Hills", "Nagole"
+    "Banjara Hills", "Jubilee Hills", "Nagole", "Madhapur", "Gachibowli", 
+    "Kondapur", "Manikonda", "Miyapur", "Chandanagar", "Nacharam"
   ]
 };
 

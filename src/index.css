@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  --font-sans: "Plus Jakarta Sans", "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   
   /* Modern Service Business Color Palette */
   --color-primary: #0f172a; /* Slate 900 - Trust & Professionalism */
-  --color-secondary: #3b82f6; /* Blue 500 - Action & Clarity */
+  --color-secondary: #2563eb; /* Blue 600 - Action & Clarity */
   --color-accent: #f59e0b; /* Amber 500 - Attention & Urgency */
   
   --spacing-container: 1280px;
@@ -18,5 +18,6 @@ html {
 }
 
 body {
-  @apply bg-gray-50 text-gray-800 antialiased;
+  @apply bg-slate-50 text-slate-800 antialiased selection:bg-blue-600 selection:text-white;
 }
+

@@ -90,6 +90,11 @@ export default function Footer() {
                                 </Link>
                             </li>
                             <li>
+                                <Link to="/bosch-washing-machine-repair" className="hover:text-blue-400 transition-colors">
+                                    Bosch Washing Machine Repair
+                                </Link>
+                            </li>
+                            <li>
                                 <span className="text-slate-500">Microwave Repair (Coming Soon)</span>
                             </li>
                             <li>
